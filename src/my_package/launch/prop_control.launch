@@ -1,0 +1,10 @@
+<launch>
+  <!-- Launch turtlebot3_gazebo -->
+  <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_empty_world.launch"/>
+
+  <!-- Launch turtlebot3_goal.py with parameters -->
+  <node name="my_turtlebot" pkg="My_turtlebot3" type="turtlebot3_goal.py" output="screen">
+    <param name="goal_x" type="double" value="1.0"/>
+    <param name="goal_y" type="double" value="1.0"/>
+  </node>
+</launch>
